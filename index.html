@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Lanka Election 2024</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      position: relative;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Blurred background image */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('wallpaperflare.com_wallpaper.jpg') no-repeat center center/cover;
+      filter: blur(8px); /* Adjust blur amount here */
+      z-index: -1; /* Ensure background is behind content */
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Custom animation for the "Thank You" note */
+    @keyframes thankYouAnimation {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    #thankYou {
+      animation: thankYouAnimation 1s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="container mx-auto py-12">
+    <h1 class="text-4xl font-bold mb-8 text-center animate__animated animate__fadeInDown">මෙවර ඔබගේ වටිනා මනාපය කාහටද?</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Candidate 1 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate__animated animate__fadeInUp">
+        <img src="https://cdnuploads.aa.com.tr/uploads/Contents/2022/07/20/thumbs_b_c_5027e373e0f532f509cd40063f3ea6cb.jpg?v=103909" alt="Ranil Wickremesinghe" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-2xl font-bold mb-2">Ranil Wickremesinghe</h2>
+          <p class="text-gray-600 mb-4">Ranil Wickremesinghe (born 24 March 1949) is a Sri Lankan politician serving as the ninth and current President of Sri Lanka. He also holds several ministerial roles, including Minister of Finance, Minister of Defence, Minister of Technology and Minister of Women, Child Affairs and Social Empowerment.</p>
+          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors duration-300" onclick="vote('Ranil Wickremesinghe')">Vote</button>
+        </div>
+      </div>
+      <!-- Candidate 2 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate__animated animate__fadeInUp">
+        <img src="http://www.newswire.lk/wp-content/uploads/2023/10/Namal-Rajapaksa-1.jpg" alt="Namal Rajapaksa" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-2xl font-bold mb-2">Namal Rajapaksa</h2>
+          <p class="text-gray-600 mb-4">Lakshman Namal Rajapaksa (Sinhala: ලක්ශ්මන් නාමල් රාජපක්ෂ, Tamil: நாமல் ராஜபக்ஷ; born 10 April 1986; known as Namal Rajapaksa) is a Sri Lankan politician and lawyer. He is the eldest son of former President and former Prime Minister Mahinda Rajapaksa and a member of parliament.</p>
+          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors duration-300" onclick="vote('Namal Rajapaksa')">Vote</button>
+        </div>
+      </div>
+      <!-- Candidate 3 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate__animated animate__fadeInUp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Sajith_Premadasa_%28portrait%29.png/300px-Sajith_Premadasa_%28portrait%29.png" alt="Sajith Premadasa" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-2xl font-bold mb-2">Sajith Premadasa</h2>
+          <p class="text-gray-600 mb-4">Sajith Premadasa (Sinhala: සජිත් ප්‍රේමදාස, Tamil: சஜித் பிரேமதாச; born 12 January 1967) is a Sri Lankan politician. He is the current Leader of the Opposition of Sri Lanka and Member of Parliament for Colombo District. He is the current leader of the Samagi Jana Balawegaya.</p>
+          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors duration-300" onclick="vote('Sajith Premadasa')">Vote</button>
+        </div>
+      </div>
+      <!-- Candidate 4 -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate__animated animate__fadeInUp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Anura_Kumara_Dissanayaka.jpg/330px-Anura_Kumara_Dissanayaka.jpg" alt="Anura Kumara Dissanayake" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-2xl font-bold mb-2">Anura Kumara Dissanayake</h2>
+          <p class="text-gray-600 mb-4">He has been a member of parliament since September 2000, having been either appointed from the national list or elected, Dissanayake served as the Minister of Agriculture, Livestock, Land and Irrigation from 2004 to 2005 and Chief Opposition Whip from 2015 to 2018.</p>
+          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors duration-300" onclick="vote('Anura Kumara Dissanayake')">Vote</button>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 text-center">
+      <canvas id="voteChart" width="400" height="400"></canvas>
+    </div>
+    <div id="voteResult" class="mt-8 text-center text-2xl font-bold animate__animated animate__fadeInUp"></div>
+    <div id="thankYou" class="mt-8 text-center text-2xl font-bold animate__animated animate__fadeInUp" style="display: none;">Thank you for voting!</div>
+  </div>
+
+  <script>
+    let votes = {
+      'Ranil Wickremesinghe': 0,
+      'Namal Rajapaksa': 0,
+      'Sajith Premadasa': 0,
+      'Anura Kumara Dissanayake': 0
+    };
+
+    let hasVoted = false; // Track if the user has already voted
+
+    function vote(candidate) {
+      if (hasVoted) {
+        alert('You have already voted!');
+        return;
+      }
+      votes[candidate]++;
+      hasVoted = true; // Set to true once the user has voted
+      updateVoteChart();
+      showVoteResult(candidate);
+      showThankYou();
+    }
+
+    function updateVoteChart() {
+      const ctx = document.getElementById('voteChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: Object.keys(votes),
+          datasets: [{
+            label: 'Votes',
+            data: Object.values(votes),
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    function showVoteResult(candidate) {
+      const voteResult = document.getElementById('voteResult');
+      voteResult.textContent = `You chose ${candidate}!`;
+      voteResult.classList.remove('animate__fadeInUp');
+      void voteResult.offsetWidth; // Trigger reflow to restart animation
+      voteResult.classList.add('animate__fadeInUp');
+    }
+
+    function showThankYou() {
+      const thankYou = document.getElementById('thankYou');
+      thankYou.style.display = 'block';
+      thankYou.classList.remove('animate__fadeInUp');
+      void thankYou.offsetWidth; // Trigger reflow to restart animation
+      thankYou.classList.add('animate__fadeIn');
+    }
+  </script>
+</body>
+</html>
